@@ -1,0 +1,18 @@
+Package: xlW2L
+Title: Convert an Excel Wide Table to Long Data Frame
+Version: 0.0.1.9000
+Authors@R: person("Tianqing", "Liu", email = "tianliu@yahoo.com", role = c("aut", "cre"))
+Description: This function converts Execl Wide Table to Long Data Frame.  The original
+    Excel table is with identification columns, one key-name column and y-value columns.
+    It removes y-value columns without headers or without any y-value contents, and removes
+    identification columns without headers or without id-value in the first cell. It 
+    returns three objects: the original Excel table, cleaned Wide Data Frame, and Long 
+    Data Frame.   
+Depends: R (>= 3.4.2)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Imports: 
+    xlsx,
+    cel2num
