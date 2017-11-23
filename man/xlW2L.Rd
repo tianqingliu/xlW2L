@@ -31,3 +31,4 @@ This function converts Execl Wide Table to Long Data Frame.
 \examples{
 xlW2L(filePath,,"e8","o44","i8")$longF
 }
+\keyword{Excel}
