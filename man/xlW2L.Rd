@@ -8,7 +8,7 @@ xlW2L(filePath, shtNum = 1, celIStart, cellEnd, x1cell, x1Name = "",
   yName = "")
 }
 \arguments{
-\item{filePath}{the Excel file with extension .xlsx, .xls, xlsm.}
+\item{filePath}{the Excel file with extension .xlsx, .xls, .xlsm, and .csv.  If csv file is selected, other arguments are not needed.}
 
 \item{shtNum}{an Excel sheet number for data table, defaults to 1.}
 
@@ -23,12 +23,13 @@ xlW2L(filePath, shtNum = 1, celIStart, cellEnd, x1cell, x1Name = "",
 \item{yName}{optional response variable name for y-values returned in Long Data Frame, defaults to "" will use "Y" for header of y-value column in Long Data Frame.}
 }
 \value{
-xlW2L(..)$x1T or xlW2L(..)[1] -- the original Excel table;  xlW2L(..)wideF or xlW2L(..)[2] -- the wide form after cleaning up;  xlW2L(..)longF or xlW2L(..)[3] -- the long data form.
+xlW2L(..)$x1T or xlW2L(..)[1] -- the original Excel table;  xlW2L(..)wideF or xlW2L(..)[2] -- the wide form after cleaning up;  xlW2L(..)longF or xlW2L(..)[3] -- the long data form. If the original file is .csv type, all three objects returned are the original csv table.
 }
 \description{
 This function converts Execl Wide Table to Long Data Frame.
 }
 \examples{
 xlW2L(filePath,,"e8","o44","i8")$longF
+xlW2L(filePath)$longF -- if original file is .cvs type, it returns the original cvs table.
 }
 \keyword{Excel}
